@@ -1,0 +1,12 @@
+.env
+/nginx/logs/**
+!/nginx/logs/.gitkeep
+.db
+
+# Файлы web-проектов
+/projects/**
+!/projects/.gitkeep
+
+
+# Другие файлы
+.idea/

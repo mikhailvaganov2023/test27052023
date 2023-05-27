@@ -1,0 +1,51 @@
+version: '3.8'
+
+networks:
+  backend:
+
+services:
+
+  test-nginx:
+    image: nginx:stable-alpine
+    container_name: test-nginx
+    ports:
+      - "${NGINX_PORT}:9003"
+    volumes:
+      - ./yii:/var/www
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/logs:/var/log/nginx/
+    depends_on:
+      - yii
+    environment:
+      TZ: ${WORKSPACE_TIMEZONE}
+    networks:
+      - backend
+
+  yii:
+    build:
+      context: yii
+      args:
+        DOCKER_PHP_VERSION: '8.0'
+    working_dir: /var/www
+    container_name: yii
+    restart: always
+    volumes:
+      - ./yii:/var/www/
+      - ./php-ini/7.3/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "${YII_PORT}:9000"
+    networks:
+      - backend
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=yii
+      - MYSQL_ROOT_PASSWORD=yii
+    networks:
+      - backend
+    container_name: db

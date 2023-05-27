@@ -1,0 +1,2747 @@
+2023-05-27 17:39:41 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:39:41 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209181.8468
+    'REQUEST_TIME' => 1685209181
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:40:04 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:40:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209204.6445
+    'REQUEST_TIME' => 1685209204
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:41:42 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:41:42 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209302.4774
+    'REQUEST_TIME' => 1685209302
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:41:45 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:41:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209305.332
+    'REQUEST_TIME' => 1685209305
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:41:50 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:41:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209310.2171
+    'REQUEST_TIME' => 1685209310
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:46:27 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:46:27 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209587.2899
+    'REQUEST_TIME' => 1685209587
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:48:37 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:48:37 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209717.8383
+    'REQUEST_TIME' => 1685209717
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:48:44 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: name in /var/www/vendor/yiisoft/yii2/console/Controller.php:244
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 17:48:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209724.6859
+    'REQUEST_TIME' => 1685209724
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:48:48 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('test')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('test')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:48:48 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209728.4711
+    'REQUEST_TIME' => 1685209728
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'test'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:49:14 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=;por...', NULL, NULL, NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('test')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(28): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(328): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(133): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('test')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(28): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2023-05-27 17:49:14 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685209754.7748
+    'REQUEST_TIME' => 1685209754
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'test'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:56:36 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: migrate/migrate in /var/www/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('migrate', Array)
+#1 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('migrate', Array)
+#2 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/migrate', Array)
+#3 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/migrate', Array)
+#4 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 /var/www/yii(28): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrate/migrate". in /var/www/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/migrate', Array)
+#1 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /var/www/yii(28): yii\base\Application->run()
+#3 {main}
+2023-05-27 17:56:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210196.2394
+    'REQUEST_TIME' => 1685210196
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:56:39 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "migrat". in /var/www/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrat', Array)
+#1 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrat', Array)
+#2 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /var/www/yii(28): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrat". in /var/www/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrat', Array)
+#1 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /var/www/yii(28): yii\base\Application->run()
+#3 {main}
+2023-05-27 17:56:39 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210199.0555
+    'REQUEST_TIME' => 1685210199
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrat'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:56:42 [-][-][-][error][Error] Error: Class "App\Shared\Infra\Migration\MigrationAbstract" not found in /var/www/database/migrations/m230527_133825_init.php:8
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(841): require_once()
+#1 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(197): yii\console\controllers\BaseMigrateController->includeMigrationFile('m230527_133825_...')
+#2 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_133825_...')
+#3 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_133825_...')
+#4 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#5 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/yii(28): yii\base\Application->run()
+#13 {main}
+2023-05-27 17:56:40 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210200.7674
+    'REQUEST_TIME' => 1685210200
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:56:53 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#7 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#8 [internal function]: yii\base\BaseObject->__construct(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#14 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /var/www/yii(28): yii\base\Application->run()
+#24 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#6 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/yii(28): yii\base\Application->run()
+#23 {main}
+2023-05-27 17:56:51 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210211.3084
+    'REQUEST_TIME' => 1685210211
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:58:22 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/yii(28): yii\base\Application->run()
+#13 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#7 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /var/www/yii(28): yii\base\Application->run()
+#12 {main}
+2023-05-27 17:58:22 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210302.7528
+    'REQUEST_TIME' => 1685210302
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--db=cbt'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 17:58:57 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/yii(28): yii\base\Application->run()
+#13 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#7 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /var/www/yii(28): yii\base\Application->run()
+#12 {main}
+2023-05-27 17:58:57 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210337.5215
+    'REQUEST_TIME' => 1685210337
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--db=cbt'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:01:15 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/yii(28): yii\base\Application->run()
+#13 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#7 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /var/www/yii(28): yii\base\Application->run()
+#12 {main}
+2023-05-27 18:01:15 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210475.2864
+    'REQUEST_TIME' => 1685210475
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--db=cbt'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:01:20 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Migration failed. Directory specified in migrationPath doesn't exist: @app/migrations/cbt/m230527_175019_foreigth.php in /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:150
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\console\controllers\BaseMigrateController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 18:01:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210480.7493
+    'REQUEST_TIME' => 1685210480
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@app/migrations/cbt/m230527_175019_foreigth.php'
+        3 => '--db=cbt'
+    ]
+    'argc' => 4
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:01:47 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Migration failed. Directory specified in migrationPath doesn't exist: migrations/cbt/m230527_175019_foreigth.php in /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:150
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\console\controllers\BaseMigrateController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 18:01:47 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210507.813
+    'REQUEST_TIME' => 1685210507
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=migrations/cbt/m230527_175019_foreigth.php'
+        3 => '--db=cbt'
+    ]
+    'argc' => 4
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:01:58 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Migration failed. Directory specified in migrationPath doesn't exist: cbt/m230527_175019_foreigth.php in /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:150
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\console\controllers\BaseMigrateController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 18:01:58 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210518.421
+    'REQUEST_TIME' => 1685210518
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=cbt/m230527_175019_foreigth.php'
+        3 => '--db=cbt'
+    ]
+    'argc' => 4
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:02:00 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Migration failed. Directory specified in migrationPath doesn't exist: cbt/m230527_175019_foreigth.php in /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:150
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\console\controllers\BaseMigrateController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 18:02:00 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210520.9498
+    'REQUEST_TIME' => 1685210520
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=cbt/m230527_175019_foreigth.php'
+        3 => '--db=cbt'
+    ]
+    'argc' => 4
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:02:14 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Migration failed. Directory specified in migrationPath doesn't exist: cbt/m230527_175019_foreigth.php in /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:150
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\console\controllers\BaseMigrateController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#4 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/yii(28): yii\base\Application->run()
+#8 {main}
+2023-05-27 18:02:14 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210534.5481
+    'REQUEST_TIME' => 1685210534
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=cbt/m230527_175019_foreigth.php'
+        3 => '--db=cbt'
+    ]
+    'argc' => 4
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:02:19 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/yii(28): yii\base\Application->run()
+#13 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(183): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/vendor/yiisoft/yii2/base/Controller.php(176): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#7 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#8 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /var/www/yii(28): yii\base\Application->run()
+#12 {main}
+2023-05-27 18:02:19 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210539.4751
+    'REQUEST_TIME' => 1685210539
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--db=cbt'
+    ]
+    'argc' => 3
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:02:29 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#7 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#8 [internal function]: yii\base\BaseObject->__construct(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#14 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /var/www/yii(28): yii\base\Application->run()
+#24 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#6 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/yii(28): yii\base\Application->run()
+#23 {main}
+2023-05-27 18:02:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210546.7824
+    'REQUEST_TIME' => 1685210546
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:02:46 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cb44t" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cb44t')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cb44t')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cb44t', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cb44t')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#7 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#8 [internal function]: yii\base\BaseObject->__construct(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#14 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /var/www/yii(28): yii\base\Application->run()
+#24 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cb44t". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cb44t')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cb44t', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cb44t')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#6 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/yii(28): yii\base\Application->run()
+#23 {main}
+2023-05-27 18:02:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210565.2182
+    'REQUEST_TIME' => 1685210565
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:03:21 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#7 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#8 [internal function]: yii\base\BaseObject->__construct(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#14 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /var/www/yii(28): yii\base\Application->run()
+#24 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/database/migrations/m230527_175019_foreigth.php(15): yii\db\Migration->init()
+#6 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/yii(28): yii\base\Application->run()
+#23 {main}
+2023-05-27 18:03:18 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210598.9369
+    'REQUEST_TIME' => 1685210598
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
+2023-05-27 18:04:12 [-][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "cbt" does not exist in /var/www/vendor/yiisoft/yii2/di/Container.php:507
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(507): ReflectionClass->__construct('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#2 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#4 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/database/migrations/m230527_175019_foreigth.php(16): yii\db\Migration->init()
+#7 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#8 [internal function]: yii\base\BaseObject->__construct(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#14 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /var/www/yii(28): yii\base\Application->run()
+#24 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "cbt". in /var/www/vendor/yiisoft/yii2/di/Container.php:509
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/di/Container.php(385): yii\di\Container->getDependencies('cbt')
+#1 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('cbt', Array, Array)
+#2 /var/www/vendor/yiisoft/yii2/di/Instance.php(175): yii\di\Container->get('cbt')
+#3 /var/www/vendor/yiisoft/yii2/di/Instance.php(144): yii\di\Instance->get(NULL)
+#4 /var/www/vendor/yiisoft/yii2/db/Migration.php(90): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#5 /var/www/database/migrations/m230527_175019_foreigth.php(16): yii\db\Migration->init()
+#6 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): m230527_175019_foreigth->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('m230527_175019_...', Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('m230527_175019_...', Array, Array)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(202): yii\BaseYii::createObject(Array)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration('m230527_175019_...')
+#13 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp('m230527_175019_...')
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/yii(28): yii\base\Application->run()
+#23 {main}
+2023-05-27 18:04:10 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '821fe0b022f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.28'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.28.tar.xz'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1685210650.1436
+    'REQUEST_TIME' => 1685210650
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'PROJECT_NAME' => 'yii2-skeleton'
+    'DOCKER_APP_PORT' => '8080'
+    'DOCKER_APP_SSL_PORT' => '443'
+    'DOCKER_MYSQL_PORT' => '3306'
+    'XDEBUG_REMOTE_PORT' => '9000'
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'REQUEST_COOKIE_VALIDATION_KEY' => 'YOUR_VALIDATION_KEY'
+    'ADMIN_PASSWORD' => ''
+    'APP_BASE_URL' => 'http://localhost:8088'
+    'DB_CBT_HOST' => 'db'
+    'DB_CBT_USERNAME' => 'root'
+    'DB_CBT_PASSWORD' => 'yii'
+    'DB_CBT_DATABASE' => 'cbt'
+    'DB_CBT_SCHEMA_CACHE_DURATION' => '60'
+    'DB_NEMO_GUIDE_ETALON_HOST' => 'db'
+    'DB_NEMO_GUIDE_ETALON_USERNAME' => 'root'
+    'DB_NEMO_GUIDE_ETALON_PASSWORD' => 'yii'
+    'DB_NEMO_GUIDE_ETALON_DATABASE' => 'nemo_guide_etalon'
+    'DB_NEMO_GUIDE_ETALON_SCHEMA_CACHE_DURATION' => '60'
+    'SMTP_HOST' => ''
+    'SMTP_PORT' => '465'
+    'SMTP_USERNAME' => ''
+    'SMTP_PASSWORD' => ''
+    'SMTP_ENCRYPTION' => 'ssl'
+]
